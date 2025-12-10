@@ -1,0 +1,95 @@
+# Dataset 
+## 20 patients
+INSERT INTO patients (name, gender, age) VALUES
+('John Doe', 'M', 67),
+('Mary Lee', 'F', 52),
+('Amit Sharma', 'M', 45),
+('Priya Singh', 'F', 34),
+('Robert Jones', 'M', 73),
+('Emily Brown', 'F', 29),
+('David Wilson', 'M', 58),
+('Sophia Patel', 'F', 40),
+('Michael Green', 'M', 66),
+('Isabella White', 'F', 31),
+('Daniel Clark', 'M', 54),
+('Olivia Johnson', 'F', 48),
+('Ethan Davis', 'M', 62),
+('Ava Martin', 'F', 27),
+('Noah Thompson', 'M', 37),
+('Mia Anderson', 'F', 44),
+('Liam Walker', 'M', 71),
+('Charlotte King', 'F', 36),
+('Lucas Young', 'M', 59),
+('Amelia Scott', 'F', 50);
+
+## 10 doctors
+INSERT INTO doctors (doctor_name, specialty) VALUES
+('Dr. James Smith', 'Cardiology'),
+('Dr. Priya Nair', 'Neurology'),
+('Dr. Mark Robinson', 'Orthopedics'),
+('Dr. Ananya Gupta', 'Oncology'),
+('Dr. Henry Adams', 'General Medicine'),
+('Dr. Sarah Khan', 'Pediatrics'),
+('Dr. Daniel Perez', 'Gastroenterology'),
+('Dr. Linda Zhao', 'Dermatology'),
+('Dr. Jason Clark', 'Endocrinology'),
+('Dr. Maria Torres', 'Emergency Medicine');
+
+## 40 admissions
+INSERT INTO admissions 
+(patient_id, admit_date, discharge_date, department, diagnosis, doctor_id, readmitted_within_30_days)
+VALUES
+(1, '2024-01-03', '2024-01-10', 'Cardiology', 'Heart Failure', 1, TRUE),
+(2, '2024-01-05', '2024-01-09', 'Neurology', 'Migraine', 2, FALSE),
+(3, '2024-02-01', '2024-02-05', 'Orthopedics', 'Fracture', 3, FALSE),
+(4, '2024-02-10', '2024-02-15', 'Oncology', 'Breast Cancer', 4, TRUE),
+(5, '2024-03-01', '2024-03-07', 'Cardiology', 'Arrhythmia', 1, FALSE),
+(6, '2024-03-05', '2024-03-08', 'General Medicine', 'Flu', 5, FALSE),
+(7, '2024-03-10', '2024-03-17', 'Gastroenterology', 'Ulcer', 7, TRUE),
+(8, '2024-03-12', '2024-03-18', 'Dermatology', 'Psoriasis', 8, FALSE),
+(9, '2024-03-20', '2024-03-25', 'Endocrinology', 'Thyroid Disorder', 9, TRUE),
+(10, '2024-03-22', '2024-03-29', 'Emergency', 'Accident Trauma', 10, FALSE),
+
+(11, '2024-04-01', '2024-04-05', 'Cardiology', 'Chest Pain', 1, FALSE),
+(12, '2024-04-03', '2024-04-10', 'Neurology', 'Seizure', 2, TRUE),
+(13, '2024-04-05', '2024-04-12', 'Orthopedics', 'Knee Pain', 3, FALSE),
+(14, '2024-04-07', '2024-04-14', 'Oncology', 'Lung Cancer', 4, TRUE),
+(15, '2024-04-10', '2024-04-15', 'Cardiology', 'Hypertension', 1, FALSE),
+
+(16, '2024-04-12', '2024-04-17', 'Gastroenterology', 'Acid Reflux', 7, FALSE),
+(17, '2024-04-15', '2024-04-20', 'Dermatology', 'Eczema', 8, FALSE),
+(18, '2024-04-18', '2024-04-26', 'Endocrinology', 'Diabetes', 9, TRUE),
+(19, '2024-04-20', '2024-04-28', 'Emergency', 'Burn Injury', 10, FALSE),
+(20, '2024-04-22', '2024-04-29', 'General Medicine', 'Infection', 5, TRUE),
+
+(1, '2024-05-01', '2024-05-06', 'Cardiology', 'Heart Failure', 1, TRUE),
+(2, '2024-05-03', '2024-05-09', 'Neurology', 'Migraine', 2, FALSE),
+(3, '2024-05-05', '2024-05-12', 'Orthopedics', 'Fracture', 3, FALSE),
+(4, '2024-05-07', '2024-05-16', 'Oncology', 'Breast Cancer', 4, TRUE),
+(5, '2024-05-09', '2024-05-15', 'Cardiology', 'Arrhythmia', 1, FALSE),
+
+(12, '2024-05-20', '2024-05-25', 'Neurology', 'Epilepsy', 2, TRUE),
+(14, '2024-05-22', '2024-05-28', 'Oncology', 'Tumor Growth', 4, TRUE),
+(17, '2024-05-23', '2024-05-29', 'Dermatology', 'Skin Infection', 8, FALSE),
+(18, '2024-05-24', '2024-05-30', 'Endocrinology', 'Diabetes', 9, TRUE),
+(20, '2024-05-26', '2024-05-30', 'General Medicine', 'Fever', 5, FALSE);
+
+## 40 billing rows
+INSERT INTO billing (patient_id, admission_id, total_cost, insurance_covered, out_of_pocket)
+SELECT 
+    a.patient_id,
+    a.admission_id,
+    (2000 + random() * 6000)::numeric(10,2),
+    (1000 + random() * 3000)::numeric(10,2),
+    (500 + random() * 1500)::numeric(10,2)
+FROM admissions a;
+
+## 40 medication rows
+INSERT INTO medications (patient_id, medicine, dosage, start_date, end_date)
+SELECT 
+    patient_id,
+    (ARRAY['Metformin','Atorvastatin','Aspirin','Omeprazole','Paracetamol','Metoprolol','Insulin','Vitamin D','Ibuprofen','Antibiotic'])[floor(random()*10)+1],
+    (ARRAY['100mg','250mg','500mg','10mg','5mg'])[floor(random()*5)+1],
+    admit_date,
+    discharge_date
+FROM admissions;
