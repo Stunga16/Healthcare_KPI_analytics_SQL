@@ -1,5 +1,5 @@
 
-# Healthcare-SQL-analytics-project 🩺 
+# SQL Analytics to Improve Hospital Performance and Patient Care 🩺 
 
 A real-world analytics project for hospitals & healthcare decision-making.
 # Project Overview:
