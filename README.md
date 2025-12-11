@@ -1,11 +1,9 @@
 
-# SQL Analytics to Improve Hospital Performance and Patient Care 🩺 
+# Improve Hospital Performance and Patient Care (SQL Analytics) 🩺 
 
 A real-world analytics project for hospitals & healthcare decision-making.
 # Project Overview:
-
-This project simulates a real hospital database and applies SQL analytics to solve key business problems such as:
-
+## The goal of this project is to investigate
 1. Reducing patient readmissions
 
 2. Improving department efficiency
