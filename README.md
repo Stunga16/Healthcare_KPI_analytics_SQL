@@ -18,7 +18,6 @@ A real-world analytics project for hospitals & healthcare decision-making.
 
 7. Tracking monthly admission trends
 
-All analysis is performed using PostgreSQL, a widely-used database system in Canadian healthcare & tech companies.
 
 # Database Schema (ERD Structure):
 Tables:
