@@ -1,7 +1,7 @@
 
 # Improve Hospital Performance and Patient Care (SQL Analytics) 🩺 
 
-A real-world analytics project for hospitals & healthcare decision-making.
+MapleCare General Hospital is a mid-sized Canadian multi-specialty hospital operating within a publicly funded healthcare system and facing challenges with 30-day readmissions, capacity constraints, and uneven clinical workloads. This project simulates a real-world healthcare analytics initiative where a relational hospital database was designed and SQL-based analysis was used to support quality-of-care monitoring, operational efficiency, physician performance evaluation, and cost visibility—enabling evidence-based decision-making aligned with Canadian healthcare performance benchmarks.
 # Project Overview:
 ## The goal of this project:
 1. Reducing patient readmissions
