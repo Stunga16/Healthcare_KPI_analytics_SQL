@@ -1,5 +1,4 @@
-# Hospital KPI: 
-## Average Length of Stay (ALOS)
+# Average Length of Stay (ALOS)
 
 SELECT 
     ROUND(AVG(discharge_date - admit_date), 2) AS avg_length_of_stay
