@@ -55,7 +55,7 @@ One patient → many medications
 Designed to reflect realistic patterns in healthcare.
 
 #   Key SQL Analysis:
-1. Average Length of Stay (ALOS) [Check SQL query](https://github.com/Stunga16/healthcare-SQL-analytics-project/blob/main/Average%20Length%20of%20Stay%20(ALOS)) 
+1. Average Length of Stay (ALOS) [find SQL query](https://github.com/Stunga16/healthcare-SQL-analytics-project/blob/main/Average%20Length%20of%20Stay%20(ALOS)) 
 
 Helps hospitals reduce bed occupancy & optimize operations.
 
