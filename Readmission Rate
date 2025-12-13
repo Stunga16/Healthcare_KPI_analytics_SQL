@@ -1,0 +1,6 @@
+# Readmission Rate (Key Healthcare Metric)
+
+SELECT 
+    ROUND( (SUM(CASE WHEN readmitted_within_30_days THEN 1 ELSE 0 END)::decimal 
+          / COUNT(*)) * 100, 2) AS readmission_rate_percent
+FROM admissions;
