@@ -1,0 +1,8 @@
+#Which Diagnoses Are Most Expensive?
+SELECT 
+    a.diagnosis,
+    ROUND(AVG(b.total_cost), 2) AS avg_cost
+FROM admissions a
+JOIN billing b ON a.admission_id = b.admission_id
+GROUP BY a.diagnosis
+ORDER BY avg_cost DESC;
