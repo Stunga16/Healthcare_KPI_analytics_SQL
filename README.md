@@ -85,9 +85,13 @@ Metformin, Aspirin & Antibiotics are most prescribed → aligns with chronic ill
 # Tools Used:
 
 SQL (PostgreSQL)
+
 pgAdmin
+
 Lucid
+
 Database Design
+
 Data Analysis
 
 # Business Value:
