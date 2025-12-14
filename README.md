@@ -22,6 +22,9 @@ MapleCare General Hospital is a mid-sized Canadian multi-specialty hospital oper
 # Database Schema (ERD Structure):
 [Find](https://lucid.app/lucidchart/bbd392a6-8673-4401-ab10-444e8e3484a4/edit?viewport_loc=-315%2C-287%2C1544%2C976%2C0_0&invitationId=inv_98ccf84b-e2d8-4ff2-8457-1e714f04589e)
 
+<img width="736" height="468" alt="Screenshot 2025-12-13 at 10 48 34 PM" src="https://github.com/user-attachments/assets/0cb6ecef-1dad-4535-896c-72fc613b75e7" />
+
+
 1. patients (patient details)
 
 2. doctors (specialty & doctor info)
